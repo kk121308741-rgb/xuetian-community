@@ -389,8 +389,17 @@ footer span{color:var(--gold)}
 <footer>
   <p>© 2025 <span>花蓮縣富里鄉學田社區發展協會</span> 版權所有<span> Demo版本</span></p>
   <p style="margin-top:.5rem;font-size:12px;opacity:.6">花蓮縣富里鄉 · 花東縱谷 · 台灣</p>
-  <div style="margin-top:1.2rem;display:flex;justify-content:center">
-    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=xuetian-demo-production.up.railway.app&count_bg=%2352b788&title_bg=%231a3d2b&icon=&icon_color=%23ffffff&title=%E4%BB%8A%E6%97%A5+%2F+%E7%B8%BD%E7%80%8F%E8%A6%BD&edge_flat=false" style="height:32px" alt="瀏覽人數"/>
+  <div style="margin-top:1.2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap">
+    <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:.6rem 1.6rem;text-align:center">
+      <div style="font-size:11px;letter-spacing:2px;color:var(--gold);margin-bottom:.3rem">今日瀏覽</div>
+      <div style="font-size:1.4rem;font-weight:700;color:#fff"><span id="busuanzi_value_day_uv">--</span></div>
+    </div>
+    <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:.6rem 1.6rem;text-align:center">
+      <div style="font-size:11px;letter-spacing:2px;color:var(--gold);margin-bottom:.3rem">總瀏覽人數</div>
+      <div style="font-size:1.4rem;font-weight:700;color:#fff"><span id="busuanzi_value_site_uv">--</span></div>
+    </div>
+  </div>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   </div>
 </footer>
 
