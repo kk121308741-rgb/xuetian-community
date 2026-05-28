@@ -389,18 +389,9 @@ footer span{color:var(--gold)}
 <footer>
   <p>© 2025 <span>花蓮縣富里鄉學田社區發展協會</span> 版權所有<span> Demo版本</span></p>
   <p style="margin-top:.5rem;font-size:12px;opacity:.6">花蓮縣富里鄉 · 花東縱谷 · 台灣</p>
-  <div style="margin-top:1.2rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap">
-    <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:.6rem 1.4rem;min-width:120px">
-      <div style="font-size:11px;letter-spacing:2px;color:var(--gold);margin-bottom:.2rem">今日瀏覽</div>
-      <div style="font-size:1.5rem;font-weight:700;color:#fff" id="todayCount">—</div>
-    </div>
-    <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:.6rem 1.4rem;min-width:120px">
-      <div style="font-size:11px;letter-spacing:2px;color:var(--gold);margin-bottom:.2rem">總瀏覽人數</div>
-      <div style="font-size:1.5rem;font-weight:700;color:#fff" id="totalCount">—</div>
-    </div>
+  <div style="margin-top:1.2rem;display:flex;justify-content:center">
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fxuetian-demo-production.up.railway.app&count_bg=%2352b788&title_bg=%231a3d2b&icon=&icon_color=%23ffffff&title=%E4%BB%8A%E6%97%A5+%2F+%E7%B8%BD%E7%80%8F%E8%A6%BD&edge_flat=false" style="height:32px" alt="瀏覽人數"/>
   </div>
-  <!-- hits counter (hidden, used for data only) -->
-  <img id="hitsImg" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=xuetian-community-site&count_bg=%2352b788&title_bg=%231a3d2b&title=today&edge_flat=false" style="display:none" alt="visits">
 </footer>
 
 <script>
@@ -434,23 +425,6 @@ function switchTab(id){
 // Mobile menu
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open')}
-
-// Visitor counter via hits.seeyoufarm.com
-(function(){
-  var img = new Image();
-  img.onload = function(){
-    // Parse today/total from the SVG badge via fetch
-    fetch('https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=xuetian-community-2024&count_bg=%2352b788&title_bg=%231a3d2b&title=V&edge_flat=false')
-      .then(r=>r.text())
-      .then(svg=>{
-        var nums = svg.match(/(\d[\d,]*)/g);
-        if(nums && nums.length>=2){
-          document.getElementById('todayCount').textContent = nums[0].replace(/,/g,'');
-          document.getElementById('totalCount').textContent = nums[1].replace(/,/g,'');
-        }
-      }).catch(()=>{});
-  };
-  img.src='https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=xuetian-community-2024';
-})();</script>
+</script>
 </body>
 </html>
